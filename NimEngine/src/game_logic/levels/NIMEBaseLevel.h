@@ -6,8 +6,14 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class NIMEBaseActor;
 
-@interface NIMEBaseLevel : NSObject
+@interface NIMEBaseLevel : NSObject {
+    
+    NSMutableDictionary *_loadedActors;
+    
+}
+
+- (void)addActor:(NIMEBaseActor*)actor;
 
 @end

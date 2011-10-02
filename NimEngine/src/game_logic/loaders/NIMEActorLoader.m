@@ -7,6 +7,9 @@
 //
 
 #import "NIMEActorLoader.h"
+#import "NIMEBaseActor.h"
+
+#define CONFIGURATION_KEY_NAME @"name"
 
 @implementation NIMEActorLoader
 
@@ -18,6 +21,15 @@
     }
     
     return self;
+}
+
+- (NIMEBaseActor*)loadActorFromData:(NSDictionary*)data {
+    NIMEBaseActor* result           = nil;
+    
+    result = [[NIMEBaseActor alloc] init];
+#warning TODO implementar loader
+    
+    return [result autorelease];
 }
 
 @end

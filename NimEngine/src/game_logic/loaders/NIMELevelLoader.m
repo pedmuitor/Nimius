@@ -6,6 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "NIMEBaseLevel.h"
 #import "NIMELevelLoader.h"
 
 @implementation NIMELevelLoader
@@ -18,6 +19,11 @@
     }
     
     return self;
+}
+
+- (NIMEBaseLevel*)loadLevelFromData:(NSDictionary *)data {
+#warning TODO
+    return nil;
 }
 
 @end

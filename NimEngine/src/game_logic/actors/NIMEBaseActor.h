@@ -19,7 +19,7 @@ typedef NSString*   NIMEActorType;
 }
 
 #warning TODO: heredar de NSObject y poner propiedades
-
+#warning TODO: render target y physics target id
 @property (nonatomic,readonly)NIMEActorType type;
 @property (nonatomic, assign)BOOL           flipX;
 @property (nonatomic, assign)BOOL           flipY;

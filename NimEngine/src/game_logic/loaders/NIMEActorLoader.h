@@ -6,6 +6,10 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+@class NIMEBaseActor;
+
 @interface NIMEActorLoader : NSObject
+
+- (NIMEBaseActor*)loadActorFromData:(NSDictionary*)data;
 
 @end

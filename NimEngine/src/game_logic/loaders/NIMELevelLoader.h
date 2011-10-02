@@ -6,8 +6,10 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class NIMEBaseLevel;
 
 @interface NIMELevelLoader : NSObject
+
+- (NIMEBaseLevel*)loadLevelFromData:(NSDictionary*)data;
 
 @end

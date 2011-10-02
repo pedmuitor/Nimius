@@ -17,6 +17,8 @@
 		1C6F140A1438DC2F0071E287 /* NIMELevelLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6F14081438DC2F0071E287 /* NIMELevelLoader.m */; };
 		1C6F140E1438DCA10071E287 /* NIMEBaseLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C6F140C1438DCA10071E287 /* NIMEBaseLevel.h */; };
 		1C6F140F1438DCA10071E287 /* NIMEBaseLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6F140D1438DCA10071E287 /* NIMEBaseLevel.m */; };
+		1C6F14121438E2400071E287 /* NIMEBaseGraphicObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C6F14101438E2400071E287 /* NIMEBaseGraphicObject.h */; };
+		1C6F14131438E2400071E287 /* NIMEBaseGraphicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6F14111438E2400071E287 /* NIMEBaseGraphicObject.m */; };
 		CF00B87B143120F7001663F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF00B87A143120F7001663F4 /* Foundation.framework */; };
 		CF1BECF4143751DC004B6D54 /* Box2D.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1BEBD0143751DC004B6D54 /* Box2D.h */; };
 		CF1BECF5143751DC004B6D54 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF1BEBD2143751DC004B6D54 /* b2BroadPhase.cpp */; };
@@ -316,6 +318,8 @@
 		1C6F14081438DC2F0071E287 /* NIMELevelLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMELevelLoader.m; sourceTree = "<group>"; };
 		1C6F140C1438DCA10071E287 /* NIMEBaseLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEBaseLevel.h; sourceTree = "<group>"; };
 		1C6F140D1438DCA10071E287 /* NIMEBaseLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMEBaseLevel.m; sourceTree = "<group>"; };
+		1C6F14101438E2400071E287 /* NIMEBaseGraphicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEBaseGraphicObject.h; sourceTree = "<group>"; };
+		1C6F14111438E2400071E287 /* NIMEBaseGraphicObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMEBaseGraphicObject.m; sourceTree = "<group>"; };
 		CF00B877143120F7001663F4 /* libNimEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNimEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF00B87A143120F7001663F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF1BEBD0143751DC004B6D54 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
@@ -1153,6 +1157,8 @@
 			children = (
 				CFB6A44814378928009306AD /* NIMEBaseActor.h */,
 				CFB6A44914378928009306AD /* NIMEBaseActor.m */,
+				1C6F14101438E2400071E287 /* NIMEBaseGraphicObject.h */,
+				1C6F14111438E2400071E287 /* NIMEBaseGraphicObject.m */,
 			);
 			path = actors;
 			sourceTree = "<group>";
@@ -1331,6 +1337,7 @@
 				1C6F14051438DC160071E287 /* NIMEGraphicsLoader.h in Headers */,
 				1C6F14091438DC2F0071E287 /* NIMELevelLoader.h in Headers */,
 				1C6F140E1438DCA10071E287 /* NIMEBaseLevel.h in Headers */,
+				1C6F14121438E2400071E287 /* NIMEBaseGraphicObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1518,6 +1525,7 @@
 				1C6F14061438DC160071E287 /* NIMEGraphicsLoader.m in Sources */,
 				1C6F140A1438DC2F0071E287 /* NIMELevelLoader.m in Sources */,
 				1C6F140F1438DCA10071E287 /* NIMEBaseLevel.m in Sources */,
+				1C6F14131438E2400071E287 /* NIMEBaseGraphicObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
