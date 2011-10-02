@@ -14,8 +14,6 @@
 extern NIMEEventManager*    gEventManager;
 
 static char key_identifier;
-static char key_name;
-static char key_rendered_actor_id;
 
 @interface CCNode(NIME_Private)
 - (BOOL)handleActorEvent:(NIMEEvent*)event;
@@ -46,32 +44,14 @@ static char key_rendered_actor_id;
 
 - (void)deallocNime{
      objc_setAssociatedObject(self, &key_identifier, nil, OBJC_ASSOCIATION_COPY);
-     objc_setAssociatedObject(self, &key_name, nil, OBJC_ASSOCIATION_COPY);
-     objc_setAssociatedObject(self, &key_rendered_actor_id, nil, OBJC_ASSOCIATION_RETAIN);
     [self deallocNime];
 }
 
-- (NSString*)identifier{
-    return (NSString*)objc_getAssociatedObject(self, &key_identifier);
+- (NSUInteger)identifier{
+    return [(NSNumber*)objc_getAssociatedObject(self, &key_identifier) unsignedIntValue];
 }
-- (void)setIdentifier:(NSString*)identifier{
-     objc_setAssociatedObject(self, &key_identifier, identifier, OBJC_ASSOCIATION_COPY);
-}
-
-- (NSString*)name{
-    return (NSString*)objc_getAssociatedObject(self, &key_name);
-}
-
-- (void)setName:(NSString*)name{
-    objc_setAssociatedObject(self, &key_name, name, OBJC_ASSOCIATION_COPY);
-}
-
-- (NSString*)renderedActorId{
-    return (NSString*)objc_getAssociatedObject(self, &key_rendered_actor_id);
-}
-
-- (void)setRenderedActorId:(NSString*)actorId{
-    objc_setAssociatedObject(self, &key_rendered_actor_id, actorId, OBJC_ASSOCIATION_RETAIN);
+- (void)setIdentifier:(NSUInteger)identifier{
+     objc_setAssociatedObject(self, &key_identifier, [NSNumber numberWithUnsignedInt:identifier], OBJC_ASSOCIATION_COPY);
 }
 
 - (BOOL)handleEvent:(NIMEEvent*) event{
@@ -90,15 +70,15 @@ static char key_rendered_actor_id;
 - (BOOL)handleActorEvent:(NIMEEvent*)event{
     BOOL result = NO;
     
-    NSString    *renderedActorId    = [self renderedActorId];
+    NSUInteger    identifier   = [self identifier];
     
     NSMutableDictionary *eventInfo  = event.info;
-    NSString    *actorId            = [eventInfo objectForKey:NIME_EVENT_ID_INFO_KEY];
+    NSUInteger    renderTargetId    = [[eventInfo objectForKey:NIME_EVENT_ID_INFO_KEY] unsignedIntValue];
     
     
     
-    if ([actorId isEqual:renderedActorId]) {
-        id newValue                     = [eventInfo objectForKey:NIME_EVENT_NEW_PROPERTY_VALUE_INFO_KEY];
+    if (renderTargetId == identifier) {
+        id newValue = [eventInfo objectForKey:NIME_EVENT_NEW_PROPERTY_VALUE_INFO_KEY];
         
         if ([event.type isEqual:NIME_EVENT_TYPE_ACTOR_MOVED]) {
             CGPoint newPosition = [(NSValue*)newValue CGPointValue];

@@ -18,6 +18,8 @@ typedef NSString*   NIMEActorType;
     BOOL            _flipY;
 }
 
+#warning TODO: heredar de NSObject y poner propiedades
+
 @property (nonatomic,readonly)NIMEActorType type;
 @property (nonatomic, assign)BOOL           flipX;
 @property (nonatomic, assign)BOOL           flipY;

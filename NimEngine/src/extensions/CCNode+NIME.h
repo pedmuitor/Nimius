@@ -11,12 +11,8 @@
 
 @interface CCNode(NIME) <INIMEEventListener>
 
-- (NSString*)identifier;
-- (void)setIdentifier:(NSString*)identifier;
-- (NSString*)name;
-- (void)setName:(NSString*)name;
-- (NSString*)renderedActorId;
-- (void)setRenderedActorId:(NSString*)actorId;
+- (NSUInteger)identifier;
+- (void)setIdentifier:(NSUInteger)identifier;
 - (BOOL)handleEvent:(NIMEEvent*)event;
 
 @end

@@ -25,7 +25,7 @@ typedef NSString*   NIMEEventType;
 @end
 
 @protocol INIMEEventListener <NSObject>
-- (NSString*)name;
+- (NSUInteger)identifier;
 - (BOOL)handleEvent:(NIMEEvent*) event;
 @end
 
