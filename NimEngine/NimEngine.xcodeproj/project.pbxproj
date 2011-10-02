@@ -283,10 +283,16 @@
 		CF1BEE04143751DC004B6D54 /* CJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1BECF1143751DC004B6D54 /* CJSONSerializer.h */; };
 		CF1BEE05143751DC004B6D54 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1BECF2143751DC004B6D54 /* CJSONSerializer.m */; };
 		CF1BEE06143751DC004B6D54 /* JSONRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1BECF3143751DC004B6D54 /* JSONRepresentation.h */; };
-		CF1BEE0C14375562004B6D54 /* NIMEEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1BEE0A14375562004B6D54 /* NIMEEventManager.h */; };
-		CF1BEE0D14375562004B6D54 /* NIMEEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1BEE0B14375562004B6D54 /* NIMEEventManager.m */; };
 		CF1BEE1214375FE6004B6D54 /* NIMEMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1BEE1114375FE6004B6D54 /* NIMEMacros.h */; };
 		CF1BEE1614376071004B6D54 /* NIME-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = CF1BEE1514376071004B6D54 /* NIME-Prefix.pch */; };
+		CFB6A43F143767F8009306AD /* NIMEEventManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB6A43D143767F8009306AD /* NIMEEventManager.h */; };
+		CFB6A440143767F8009306AD /* NIMEEventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB6A43E143767F8009306AD /* NIMEEventManager.m */; };
+		CFB6A446143772B6009306AD /* NIMEEventsTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB6A445143772B6009306AD /* NIMEEventsTypes.h */; };
+		CFB6A44A14378928009306AD /* NIMEBaseActor.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB6A44814378928009306AD /* NIMEBaseActor.h */; };
+		CFB6A44B14378928009306AD /* NIMEBaseActor.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB6A44914378928009306AD /* NIMEBaseActor.m */; };
+		CFB6A44F14378BCA009306AD /* CCNode+NIME.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB6A44D14378BCA009306AD /* CCNode+NIME.h */; };
+		CFB6A45014378BCA009306AD /* CCNode+NIME.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB6A44E14378BCA009306AD /* CCNode+NIME.m */; };
+		CFB6A45214379075009306AD /* libobjc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB6A45114379075009306AD /* libobjc.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -567,10 +573,16 @@
 		CF1BECF1143751DC004B6D54 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
 		CF1BECF2143751DC004B6D54 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
 		CF1BECF3143751DC004B6D54 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
-		CF1BEE0A14375562004B6D54 /* NIMEEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEEventManager.h; sourceTree = "<group>"; };
-		CF1BEE0B14375562004B6D54 /* NIMEEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMEEventManager.m; sourceTree = "<group>"; };
 		CF1BEE1114375FE6004B6D54 /* NIMEMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NIMEMacros.h; path = src/NIMEMacros.h; sourceTree = SOURCE_ROOT; };
 		CF1BEE1514376071004B6D54 /* NIME-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NIME-Prefix.pch"; sourceTree = "<group>"; };
+		CFB6A43D143767F8009306AD /* NIMEEventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEEventManager.h; sourceTree = "<group>"; };
+		CFB6A43E143767F8009306AD /* NIMEEventManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMEEventManager.m; sourceTree = "<group>"; };
+		CFB6A445143772B6009306AD /* NIMEEventsTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEEventsTypes.h; sourceTree = "<group>"; };
+		CFB6A44814378928009306AD /* NIMEBaseActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEBaseActor.h; sourceTree = "<group>"; };
+		CFB6A44914378928009306AD /* NIMEBaseActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMEBaseActor.m; sourceTree = "<group>"; };
+		CFB6A44D14378BCA009306AD /* CCNode+NIME.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+NIME.h"; sourceTree = "<group>"; };
+		CFB6A44E14378BCA009306AD /* CCNode+NIME.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+NIME.m"; sourceTree = "<group>"; };
+		CFB6A45114379075009306AD /* libobjc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.dylib; path = usr/lib/libobjc.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -578,6 +590,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB6A45214379075009306AD /* libobjc.dylib in Frameworks */,
 				CF00B87B143120F7001663F4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +619,7 @@
 		CF00B879143120F7001663F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFB6A45114379075009306AD /* libobjc.dylib */,
 				CF00B87A143120F7001663F4 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -614,6 +628,7 @@
 		CF00B87C143120F7001663F4 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CFB6A44C14378B2C009306AD /* extensions */,
 				CF1BE6E914372858004B6D54 /* external */,
 				CF1BEE07143754FE004B6D54 /* game_app */,
 				CF1BEE08143754FE004B6D54 /* game_logic */,
@@ -1062,8 +1077,8 @@
 		CF1BEE08143754FE004B6D54 /* game_logic */ = {
 			isa = PBXGroup;
 			children = (
-				CF1BEE0A14375562004B6D54 /* NIMEEventManager.h */,
-				CF1BEE0B14375562004B6D54 /* NIMEEventManager.m */,
+				CFB6A44714378928009306AD /* actors */,
+				CFB6A43C143767F8009306AD /* events */,
 			);
 			name = game_logic;
 			path = src/game_logic;
@@ -1075,6 +1090,35 @@
 			);
 			name = game_view;
 			path = src/game_view;
+			sourceTree = SOURCE_ROOT;
+		};
+		CFB6A43C143767F8009306AD /* events */ = {
+			isa = PBXGroup;
+			children = (
+				CFB6A43D143767F8009306AD /* NIMEEventManager.h */,
+				CFB6A43E143767F8009306AD /* NIMEEventManager.m */,
+				CFB6A445143772B6009306AD /* NIMEEventsTypes.h */,
+			);
+			path = events;
+			sourceTree = "<group>";
+		};
+		CFB6A44714378928009306AD /* actors */ = {
+			isa = PBXGroup;
+			children = (
+				CFB6A44814378928009306AD /* NIMEBaseActor.h */,
+				CFB6A44914378928009306AD /* NIMEBaseActor.m */,
+			);
+			path = actors;
+			sourceTree = "<group>";
+		};
+		CFB6A44C14378B2C009306AD /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFB6A44D14378BCA009306AD /* CCNode+NIME.h */,
+				CFB6A44E14378BCA009306AD /* CCNode+NIME.m */,
+			);
+			name = extensions;
+			path = src/extensions;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -1230,9 +1274,12 @@
 				CF1BEE02143751DC004B6D54 /* CJSONScanner.h in Headers */,
 				CF1BEE04143751DC004B6D54 /* CJSONSerializer.h in Headers */,
 				CF1BEE06143751DC004B6D54 /* JSONRepresentation.h in Headers */,
-				CF1BEE0C14375562004B6D54 /* NIMEEventManager.h in Headers */,
 				CF1BEE1214375FE6004B6D54 /* NIMEMacros.h in Headers */,
 				CF1BEE1614376071004B6D54 /* NIME-Prefix.pch in Headers */,
+				CFB6A43F143767F8009306AD /* NIMEEventManager.h in Headers */,
+				CFB6A446143772B6009306AD /* NIMEEventsTypes.h in Headers */,
+				CFB6A44A14378928009306AD /* NIMEBaseActor.h in Headers */,
+				CFB6A44F14378BCA009306AD /* CCNode+NIME.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1412,7 +1459,9 @@
 				CF1BEE01143751DC004B6D54 /* CJSONDeserializer.m in Sources */,
 				CF1BEE03143751DC004B6D54 /* CJSONScanner.m in Sources */,
 				CF1BEE05143751DC004B6D54 /* CJSONSerializer.m in Sources */,
-				CF1BEE0D14375562004B6D54 /* NIMEEventManager.m in Sources */,
+				CFB6A440143767F8009306AD /* NIMEEventManager.m in Sources */,
+				CFB6A44B14378928009306AD /* NIMEBaseActor.m in Sources */,
+				CFB6A45014378BCA009306AD /* CCNode+NIME.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

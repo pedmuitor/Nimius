@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CF00B876143120F7001663F4"
-               BuildableName = "libNimEngineiOS.a"
+               BuildableName = "libNimEngine.a"
                BlueprintName = "NimEngine"
                ReferencedContainer = "container:NimEngine.xcodeproj">
             </BuildableReference>
