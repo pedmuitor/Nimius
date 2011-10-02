@@ -11,56 +11,66 @@
 
 extern NIMEEventManager*    gEventManager;
 
+@interface NIMEBaseActor (Private)
+
+- (NSMutableDictionary*)createBasicActorEventInfo;
+- (void)enqueueBasicEventWithType:(NIMEEventType)eventType propertyOldValue:(id)oldValue propertyNewValue:(id)newValue;
+
+@end
+
 @implementation NIMEBaseActor
 
-@synthesize type    = _type; 
-@synthesize flipX   = _flipX;
-@synthesize flipY   = _flipY;
+@synthesize identifier          = _identifier;
+@synthesize name                = _name;
+@synthesize type                = _type;
+@synthesize rendererIdentifier  = _rendererIdentifier;
+@synthesize physicalIdentifier  = _physicalIdentifier;
+
+@synthesize visible             = _visible;
+@synthesize position            = _position;
+@synthesize rotation            = _rotation;
+@synthesize scale               = _scale;
+@synthesize flipX               = _flipX;
+@synthesize flipY               = _flipY;
+@synthesize zOrder              = _zOrder;
 
 #pragma mark
-#pragma mark Constructors & Destructors
+#pragma Constructors & Destructors
 
 - (id)init{
     self = [super init];
     if (self) {
           [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_CREATED propertyOldValue:nil propertyNewValue:nil];
+        
     }
     
     return self;
 }
 
+
 - (void)dealloc{
     [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_DESTROYED propertyOldValue:nil propertyNewValue:nil];
+    NIME_RELEASE_SAFETY(_name);
     NIME_RELEASE_SAFETY(_type);
     [super dealloc];
 }
 
 #pragma mark
-#pragma mark Propierties override
+#pragma Propierties override
 
 - (void)setPosition:(CGPoint)position{
-    [super setPosition:position];
+    _position   = position;
     [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_MOVED propertyOldValue:nil propertyNewValue:[NSValue valueWithCGPoint:position]];
 }
 
 - (void)setRotation:(float)rotation{
-    [super setRotation:rotation];
+    _rotation   = rotation;
      [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_ROTATED propertyOldValue:nil propertyNewValue:[NSNumber numberWithFloat:rotation]];
 }
 
-- (void)setScale:(float)scale{
-    [super setScale:scale];
-    [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_SCALED propertyOldValue:nil propertyNewValue:[NSValue valueWithCGPoint:CGPointMake(scale, scale)]];
-}
-
-- (void)setScaleX:(float)scaleX{
-    [super setScaleX:scaleX];
-    [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_SCALED propertyOldValue:nil propertyNewValue:[NSValue valueWithCGPoint:CGPointMake(scaleX_, scaleY_)]];
-}
-
-- (void)setScaleY:(float)scaleY{
-    [super setScaleY:scaleY];
-    [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_SCALED propertyOldValue:nil propertyNewValue:[NSValue valueWithCGPoint:CGPointMake(scaleX_, scaleY_)]];
+- (void)setScale:(CGPoint)scale{
+    _scale      = scale;
+    [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_SCALED propertyOldValue:nil propertyNewValue:[NSValue valueWithCGPoint:scale]];
 }
 
 - (void) setFlipX:(BOOL)flipX{
@@ -73,56 +83,78 @@ extern NIMEEventManager*    gEventManager;
     [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_FLIPPED_Y propertyOldValue:nil propertyNewValue:[NSNumber numberWithBool:flipY]];
 }
 
-- (void)_setZOrder:(NSInteger)z{
-    [super _setZOrder:z];
+- (void)setZOrder:(NSInteger)z{
+    _zOrder = z;
     [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_Z_ORDED_CHANGED propertyOldValue:nil propertyNewValue:[NSNumber numberWithInt:z]];
 }
 
 - (void) setVisible:(BOOL)visible{
-    [super setVisible:visible];
+    _visible    = YES;
     [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_VISIBILITY_CHANGED propertyOldValue:nil propertyNewValue:[NSNumber numberWithBool:visible]];
 }
 
 #pragma mark
-#pragma mark CCNode Methods override
+#pragma Public Methods
 
 - (void)onEnter{
-    [super onEnter];
     [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_ENTERED propertyOldValue:nil propertyNewValue:nil];
 }
 
 - (void)onExit{
-    [super onExit];
     [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_EXITED propertyOldValue:nil propertyNewValue:nil];
 }
 
+- (BOOL)hasRenderer{
+    return _rendererIdentifier  > 0;
+}
 
+- (BOOL)hasPhysicalRepresentation{
+    return _physicalIdentifier  > 0;
+}
+    
 #pragma mark
-#pragma Public Methods
+#pragma Private Methods
 
-- (NSMutableDictionary*)createBasicActorEventInfo:(NSUInteger)parametersCount{
-    NSMutableDictionary* info = [NSMutableDictionary dictionaryWithCapacity:parametersCount];
-    [info setObject:[self identifier] forKey:NIME_EVENT_ID_INFO_KEY];
+- (NSMutableDictionary*)createBasicActorEventInfo{
+    NSMutableDictionary* info = [NSMutableDictionary dictionary];
+    
+    [info setObject:[NSNumber numberWithUnsignedInt:_identifier] forKey:NIME_EVENT_ID_INFO_KEY];
     [info setObject:_type forKey:NIME_EVENT_TYPE_INFO_KEY];
+    
+    if ([self hasRenderer]) {
+        [info setObject:[NSNumber numberWithUnsignedInt:_rendererIdentifier] forKey:NIME_EVENT_RENDERER_ID_INFO_KEY];
+    }
+    
+    if ([self hasPhysicalRepresentation]) {
+        [info setObject:[NSNumber numberWithUnsignedInt:_physicalIdentifier] forKey:NIME_EVENT_PHYSICAL_ID_INFO_KEY];
+    }
+    
     return info;
 }
 
 - (void)enqueueBasicEventWithType:(NIMEEventType)eventType propertyOldValue:(id)oldValue propertyNewValue:(id)newValue{
     
-    NSMutableDictionary*    info = [self createBasicActorEventInfo:4];
+    NSMutableDictionary*    info = [self createBasicActorEventInfo];
     if (oldValue) {
         [info setObject:oldValue forKey:NIME_EVENT_OLD_PROPERTY_VALUE_INFO_KEY];
     }
     if (newValue) {
         [info setObject:newValue forKey:NIME_EVENT_NEW_PROPERTY_VALUE_INFO_KEY];
     }
-
+    
     
     NIMEEvent   *event  = [[NIMEEvent alloc] init];
     event.type          = eventType;
     event.info     = info;
     [gEventManager queueEvent:event];
     NIME_RELEASE_SAFETY(event);
+}
+    
+#pragma INIMEEventListener Methods
+    
+- (BOOL) handleEvent:(NIMEEvent *)event{
+    BOOL result = NO;
+    return result;
 }
 
 @end

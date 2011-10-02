@@ -17,7 +17,7 @@
 
 
 //---------------------
-// ACTOR EVENTS TYPES
+// ACTOR EVENTS TYPES & KEYS
 //---------------------
 #define NIME_EVENT_TYPE_ACTOR_PREFIX                @"actor_"
 #define NIME_EVENT_IS_TYPE_ACTOR(event)             [event.type hasPrefix:NIME_EVENT_TYPE_ACTOR_PREFIX]
@@ -32,6 +32,8 @@
 #define NIME_EVENT_TYPE_ACTOR_FLIPPED_Y             @"actor_flipped_y"
 #define NIME_EVENT_TYPE_ACTOR_Z_ORDED_CHANGED       @"actor_z_order_changed"
 #define NIME_EVENT_TYPE_ACTOR_VISIBILITY_CHANGED    @"actor_visibility_changed"
+#define NIME_EVENT_RENDERER_ID_INFO_KEY             @"renderer_id"
+#define NIME_EVENT_PHYSICAL_ID_INFO_KEY             @"physical_id"
 
 
 

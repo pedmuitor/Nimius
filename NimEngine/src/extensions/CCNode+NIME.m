@@ -22,16 +22,13 @@ static char key_identifier;
 @implementation CCNode(NIME)
 
 + (void) load{
-    //This will only affect to renderable CCNodes
-    if ([self class] != [CCNode class]) {
-        Method cc2dInit = class_getInstanceMethod([self class], NSSelectorFromString(@"init"));
-        Method nimeInit = class_getInstanceMethod([self class], NSSelectorFromString(@"initNime"));
-        method_exchangeImplementations(cc2dInit, nimeInit);  
-    }
-        
-        Method cc2dDealloc = class_getInstanceMethod([self class], NSSelectorFromString(@"dealloc"));
-        Method nimeDealloc = class_getInstanceMethod([self class], NSSelectorFromString(@"deallocNime"));
-        method_exchangeImplementations(cc2dDealloc, nimeDealloc); 
+    Method cc2dInit = class_getInstanceMethod([self class], NSSelectorFromString(@"init"));
+    Method nimeInit = class_getInstanceMethod([self class], NSSelectorFromString(@"initNime"));
+    method_exchangeImplementations(cc2dInit, nimeInit);  
+    
+    Method cc2dDealloc = class_getInstanceMethod([self class], NSSelectorFromString(@"dealloc"));
+    Method nimeDealloc = class_getInstanceMethod([self class], NSSelectorFromString(@"deallocNime"));
+    method_exchangeImplementations(cc2dDealloc, nimeDealloc); 
 }
 
 - (id)initNime{
@@ -43,7 +40,7 @@ static char key_identifier;
 }
 
 - (void)deallocNime{
-     objc_setAssociatedObject(self, &key_identifier, nil, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, &key_identifier, nil, OBJC_ASSOCIATION_RETAIN);
     [self deallocNime];
 }
 
@@ -51,16 +48,16 @@ static char key_identifier;
     return [(NSNumber*)objc_getAssociatedObject(self, &key_identifier) unsignedIntValue];
 }
 - (void)setIdentifier:(NSUInteger)identifier{
-     objc_setAssociatedObject(self, &key_identifier, [NSNumber numberWithUnsignedInt:identifier], OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, &key_identifier, [NSNumber numberWithUnsignedInt:identifier], OBJC_ASSOCIATION_RETAIN);
 }
 
 - (BOOL)handleEvent:(NIMEEvent*) event{
     BOOL result = NO;
-
+    
     if (NIME_EVENT_IS_TYPE_ACTOR(event)) {
         result = [self handleActorEvent:event];
     }
-     
+    
     return result;
 }
 
@@ -72,12 +69,10 @@ static char key_identifier;
     
     NSUInteger    identifier   = [self identifier];
     
-    NSMutableDictionary *eventInfo  = event.info;
-    NSUInteger    renderTargetId    = [[eventInfo objectForKey:NIME_EVENT_ID_INFO_KEY] unsignedIntValue];
+    NSMutableDictionary *eventInfo      = event.info;
+    NSUInteger    renderedTargetId      = [[eventInfo objectForKey:NIME_EVENT_RENDERER_ID_INFO_KEY] unsignedIntValue];
     
-    
-    
-    if (renderTargetId == identifier) {
+    if (renderedTargetId == identifier) {
         id newValue = [eventInfo objectForKey:NIME_EVENT_NEW_PROPERTY_VALUE_INFO_KEY];
         
         if ([event.type isEqual:NIME_EVENT_TYPE_ACTOR_MOVED]) {

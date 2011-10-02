@@ -11,20 +11,40 @@
 
 typedef NSString*   NIMEActorType;
 
-@interface NIMEBaseActor : CCNode{
-    NIMEActorType   _type;  
+@interface NIMEBaseActor : NSObject <INIMEEventListener>{
+    NSUInteger      _identifier;
+    NSString*       _name;
+    NIMEActorType   _type;
+    NSUInteger      _rendererIdentifier;
+    NSUInteger      _physicalIdentifier;
     
+    BOOL            _visible;
+    CGPoint         _position;
+    CGFloat         _rotation;
+    CGPoint         _scale;
     BOOL            _flipX;
     BOOL            _flipY;
+    NSInteger       _zOrder;
 }
 
-#warning TODO: heredar de NSObject y poner propiedades
-#warning TODO: render target y physics target id
+
+@property (nonatomic, assign)NSUInteger     identifier;
+@property (nonatomic, copy)NSString*        name;
 @property (nonatomic,readonly)NIMEActorType type;
+@property (nonatomic, assign)NSUInteger     rendererIdentifier;
+@property (nonatomic, assign)NSUInteger     physicalIdentifier;
+
+@property (nonatomic, assign)BOOL           visible;
+@property (nonatomic, assign)CGPoint        position;
+@property (nonatomic, assign)CGFloat        rotation;
+@property (nonatomic, assign)CGPoint        scale;
 @property (nonatomic, assign)BOOL           flipX;
 @property (nonatomic, assign)BOOL           flipY;
+@property (nonatomic, assign)NSInteger      zOrder;
 
-- (NSMutableDictionary*)createBasicActorEventInfo:(NSUInteger)parametersCount;
-- (void)enqueueBasicEventWithType:(NIMEEventType)eventType propertyOldValue:(id)oldValue propertyNewValue:(id)newValue;
+- (void)onEnter;
+- (void)onExit;
+- (BOOL)hasRenderer;
+- (BOOL)hasPhysicalRepresentation;
 
 @end
