@@ -25,6 +25,7 @@ typedef NSString*   NIMEActorType;
     BOOL            _flipX;
     BOOL            _flipY;
     NSInteger       _zOrder;
+    
 }
 
 
