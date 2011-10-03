@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF1D2E69143A5B3C00752DBC /* libNimEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE7DF06143918DC006516E3 /* libNimEngine.a */; };
+		CFE7DED614391566006516E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE7DED514391566006516E3 /* UIKit.framework */; };
+		CFE7DED814391566006516E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE7DED714391566006516E3 /* Foundation.framework */; };
+		CFE7DEDA14391566006516E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE7DED914391566006516E3 /* CoreGraphics.framework */; };
+		CFE7DEF314391613006516E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE7DEF014391613006516E3 /* main.m */; };
+		CFE7DEF414391613006516E3 /* NimEngineTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE7DEF214391613006516E3 /* NimEngineTestAppDelegate.m */; };
+		CFE7DEF814391769006516E3 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE7DEF714391769006516E3 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF1D2E7A143A5C0600752DBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF1D2E76143A5C0600752DBC /* NimEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF00B877143120F7001663F4;
+			remoteInfo = NimEngine;
+		};
+		CFE7DF05143918DC006516E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFE7DF01143918DC006516E3 /* NimEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF00B877143120F7001663F4;
+			remoteInfo = NimEngine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF1D2E76143A5C0600752DBC /* NimEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NimEngine.xcodeproj; path = ../NimEngine/NimEngine.xcodeproj; sourceTree = "<group>"; };
+		CFE7DED114391566006516E3 /* NimEngineTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimEngineTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE7DED514391566006516E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CFE7DED714391566006516E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CFE7DED914391566006516E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CFE7DEF014391613006516E3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CFE7DEF114391613006516E3 /* NimEngineTestAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NimEngineTestAppDelegate.h; sourceTree = "<group>"; };
+		CFE7DEF214391613006516E3 /* NimEngineTestAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NimEngineTestAppDelegate.m; sourceTree = "<group>"; };
+		CFE7DEF714391769006516E3 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		CFE7DEF914391782006516E3 /* NimEngineTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NimEngineTest-Prefix.pch"; sourceTree = "<group>"; };
+		CFE7DEFA143917EC006516E3 /* NimEngineTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NimEngineTest-Info.plist"; sourceTree = "<group>"; };
+		CFE7DF01143918DC006516E3 /* NimEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NimEngine.xcodeproj; path = ../NimEngine/NimEngine.xcodeproj; sourceTree = "<group>"; };
+		CFE7DF071439190F006516E3 /* libNimEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNimEngine.a; path = "../NimEngine/lib/Debug-iphoneos/libNimEngine.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFE7DECE14391566006516E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFE7DED614391566006516E3 /* UIKit.framework in Frameworks */,
+				CF1D2E69143A5B3C00752DBC /* libNimEngine.a in Frameworks */,
+				CFE7DED814391566006516E3 /* Foundation.framework in Frameworks */,
+				CFE7DEDA14391566006516E3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF1D2E77143A5C0600752DBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D2E7B143A5C0600752DBC /* libNimEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFE7DEC614391566006516E3 = {
+			isa = PBXGroup;
+			children = (
+				CFE7DEFA143917EC006516E3 /* NimEngineTest-Info.plist */,
+				CFE7DEF914391782006516E3 /* NimEngineTest-Prefix.pch */,
+				CFE7DEEF14391613006516E3 /* src */,
+				CFE7DED414391566006516E3 /* Frameworks */,
+				CFE7DED214391566006516E3 /* Products */,
+				CF1D2E76143A5C0600752DBC /* NimEngine.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		CFE7DED214391566006516E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFE7DED114391566006516E3 /* NimEngineTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFE7DED414391566006516E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFE7DF071439190F006516E3 /* libNimEngine.a */,
+				CFE7DF01143918DC006516E3 /* NimEngine.xcodeproj */,
+				CFE7DED514391566006516E3 /* UIKit.framework */,
+				CFE7DED714391566006516E3 /* Foundation.framework */,
+				CFE7DED914391566006516E3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFE7DEEF14391613006516E3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CFE7DEF514391769006516E3 /* resources */,
+				CFE7DEF014391613006516E3 /* main.m */,
+				CFE7DEF114391613006516E3 /* NimEngineTestAppDelegate.h */,
+				CFE7DEF214391613006516E3 /* NimEngineTestAppDelegate.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		CFE7DEF514391769006516E3 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFE7DEF614391769006516E3 /* xibs */,
+			);
+			path = resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		CFE7DEF614391769006516E3 /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+				CFE7DEF714391769006516E3 /* MainWindow.xib */,
+			);
+			path = xibs;
+			sourceTree = "<group>";
+		};
+		CFE7DF02143918DC006516E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFE7DF06143918DC006516E3 /* libNimEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFE7DED014391566006516E3 /* NimEngineTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFE7DEEC14391567006516E3 /* Build configuration list for PBXNativeTarget "NimEngineTest" */;
+			buildPhases = (
+				CFE7DECD14391566006516E3 /* Sources */,
+				CFE7DECE14391566006516E3 /* Frameworks */,
+				CFE7DECF14391566006516E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NimEngineTest;
+			productName = NimEngineTest;
+			productReference = CFE7DED114391566006516E3 /* NimEngineTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFE7DEC814391566006516E3 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = CFE7DECB14391566006516E3 /* Build configuration list for PBXProject "NimEngineTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CFE7DEC614391566006516E3;
+			productRefGroup = CFE7DED214391566006516E3 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CF1D2E77143A5C0600752DBC /* Products */;
+					ProjectRef = CF1D2E76143A5C0600752DBC /* NimEngine.xcodeproj */;
+				},
+				{
+					ProductGroup = CFE7DF02143918DC006516E3 /* Products */;
+					ProjectRef = CFE7DF01143918DC006516E3 /* NimEngine.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				CFE7DED014391566006516E3 /* NimEngineTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CF1D2E7B143A5C0600752DBC /* libNimEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libNimEngine.a;
+			remoteRef = CF1D2E7A143A5C0600752DBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CFE7DF06143918DC006516E3 /* libNimEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libNimEngine.a;
+			remoteRef = CFE7DF05143918DC006516E3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFE7DECF14391566006516E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFE7DEF814391769006516E3 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFE7DECD14391566006516E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFE7DEF314391613006516E3 /* main.m in Sources */,
+				CFE7DEF414391613006516E3 /* NimEngineTestAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CFE7DEEA14391567006516E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../NimEngine/src;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CFE7DEEB14391567006516E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../NimEngine/src;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFE7DEED14391567006516E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NimEngineTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../NimEngine/src/**";
+				INFOPLIST_FILE = "NimEngineTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../NimEngine/lib/Debug-iphoneos\"",
+				);
+				OBJROOT = obj;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = exec;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CFE7DEEE14391567006516E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NimEngineTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../NimEngine/src/**";
+				INFOPLIST_FILE = "NimEngineTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../NimEngine/lib/Debug-iphoneos\"",
+				);
+				OBJROOT = obj;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = exec;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFE7DECB14391566006516E3 /* Build configuration list for PBXProject "NimEngineTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFE7DEEA14391567006516E3 /* Debug */,
+				CFE7DEEB14391567006516E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFE7DEEC14391567006516E3 /* Build configuration list for PBXNativeTarget "NimEngineTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFE7DEED14391567006516E3 /* Debug */,
+				CFE7DEEE14391567006516E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFE7DEC814391566006516E3 /* Project object */;
+}
