@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CF5C212143A63B800172202 /* actorSample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CF5C211143A63B800172202 /* actorSample.plist */; };
 		CF1D2E69143A5B3C00752DBC /* libNimEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE7DF06143918DC006516E3 /* libNimEngine.a */; };
 		CFE7DED614391566006516E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE7DED514391566006516E3 /* UIKit.framework */; };
 		CFE7DED814391566006516E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE7DED714391566006516E3 /* Foundation.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CF5C211143A63B800172202 /* actorSample.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = actorSample.plist; sourceTree = "<group>"; };
 		CF1D2E76143A5C0600752DBC /* NimEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NimEngine.xcodeproj; path = ../NimEngine/NimEngine.xcodeproj; sourceTree = "<group>"; };
 		CFE7DED114391566006516E3 /* NimEngineTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimEngineTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE7DED514391566006516E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -64,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CF5C210143A63B800172202 /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				1CF5C211143A63B800172202 /* actorSample.plist */,
+			);
+			path = configuration;
+			sourceTree = "<group>";
+		};
 		CF1D2E77143A5C0600752DBC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		CFE7DEF514391769006516E3 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				1CF5C210143A63B800172202 /* configuration */,
 				CFE7DEF614391769006516E3 /* xibs */,
 			);
 			path = resources;
@@ -214,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE7DEF814391769006516E3 /* MainWindow.xib in Resources */,
+				1CF5C212143A63B800172202 /* actorSample.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
