@@ -6,6 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "NIMEBasePhysicObject.h"
 #import "NIMEPhysicsLoader.h"
 
 @implementation NIMEPhysicsLoader
@@ -18,6 +19,17 @@
     }
     
     return self;
+}
+
+- (NIMEBasePhysicObject*)loadPhysicObjecFromData:(NSDictionary *)data {
+    
+    static NSUInteger identifier = 0;
+    
+    NIMEBasePhysicObject *result = [[NIMEBasePhysicObject alloc] init];
+    result.identifier = ++identifier;
+    
+    
+    return [result autorelease];
 }
 
 @end

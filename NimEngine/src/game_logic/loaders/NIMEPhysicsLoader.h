@@ -6,6 +6,10 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+@class NIMEBasePhysicObject;
+
 @interface NIMEPhysicsLoader : NSObject
+
+- (NIMEBasePhysicObject*)loadPhysicObjecFromData:(NSDictionary*)data;
 
 @end

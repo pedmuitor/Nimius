@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C4D29AC1440C153001C6C3D /* NIMEPhysicsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C4D29AA1440C153001C6C3D /* NIMEPhysicsManager.h */; };
+		1C4D29AD1440C153001C6C3D /* NIMEPhysicsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4D29AB1440C153001C6C3D /* NIMEPhysicsManager.m */; };
+		1C4D29B11440C187001C6C3D /* NIMEBasePhysicObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C4D29AF1440C187001C6C3D /* NIMEBasePhysicObject.h */; };
+		1C4D29B21440C187001C6C3D /* NIMEBasePhysicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4D29B01440C187001C6C3D /* NIMEBasePhysicObject.m */; };
 		1C6F13FD1438DBB00071E287 /* NIMEActorLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C6F13FB1438DBB00071E287 /* NIMEActorLoader.h */; };
 		1C6F13FE1438DBB00071E287 /* NIMEActorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6F13FC1438DBB00071E287 /* NIMEActorLoader.m */; };
 		1C6F14011438DBF80071E287 /* NIMEPhysicsLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C6F13FF1438DBF80071E287 /* NIMEPhysicsLoader.h */; };
@@ -308,6 +312,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C4D29AA1440C153001C6C3D /* NIMEPhysicsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEPhysicsManager.h; sourceTree = "<group>"; };
+		1C4D29AB1440C153001C6C3D /* NIMEPhysicsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMEPhysicsManager.m; sourceTree = "<group>"; };
+		1C4D29AF1440C187001C6C3D /* NIMEBasePhysicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEBasePhysicObject.h; sourceTree = "<group>"; };
+		1C4D29B01440C187001C6C3D /* NIMEBasePhysicObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMEBasePhysicObject.m; sourceTree = "<group>"; };
 		1C6F13FB1438DBB00071E287 /* NIMEActorLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEActorLoader.h; sourceTree = "<group>"; };
 		1C6F13FC1438DBB00071E287 /* NIMEActorLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMEActorLoader.m; sourceTree = "<group>"; };
 		1C6F13FF1438DBF80071E287 /* NIMEPhysicsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEPhysicsLoader.h; sourceTree = "<group>"; };
@@ -622,6 +630,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C4D29A91440C153001C6C3D /* physics */ = {
+			isa = PBXGroup;
+			children = (
+				1C4D29AA1440C153001C6C3D /* NIMEPhysicsManager.h */,
+				1C4D29AB1440C153001C6C3D /* NIMEPhysicsManager.m */,
+			);
+			path = physics;
+			sourceTree = "<group>";
+		};
 		1C6F13FA1438DB7F0071E287 /* loaders */ = {
 			isa = PBXGroup;
 			children = (
@@ -1129,6 +1146,7 @@
 				CFB6A43C143767F8009306AD /* events */,
 				1C6F140B1438DC740071E287 /* levels */,
 				1C6F13FA1438DB7F0071E287 /* loaders */,
+				1C4D29A91440C153001C6C3D /* physics */,
 			);
 			name = game_logic;
 			path = src/game_logic;
@@ -1159,6 +1177,8 @@
 				CFB6A44914378928009306AD /* NIMEBaseActor.m */,
 				1C6F14101438E2400071E287 /* NIMEBaseGraphicObject.h */,
 				1C6F14111438E2400071E287 /* NIMEBaseGraphicObject.m */,
+				1C4D29AF1440C187001C6C3D /* NIMEBasePhysicObject.h */,
+				1C4D29B01440C187001C6C3D /* NIMEBasePhysicObject.m */,
 			);
 			path = actors;
 			sourceTree = "<group>";
@@ -1338,6 +1358,8 @@
 				1C6F14091438DC2F0071E287 /* NIMELevelLoader.h in Headers */,
 				1C6F140E1438DCA10071E287 /* NIMEBaseLevel.h in Headers */,
 				1C6F14121438E2400071E287 /* NIMEBaseGraphicObject.h in Headers */,
+				1C4D29AC1440C153001C6C3D /* NIMEPhysicsManager.h in Headers */,
+				1C4D29B11440C187001C6C3D /* NIMEBasePhysicObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1526,6 +1548,8 @@
 				1C6F140A1438DC2F0071E287 /* NIMELevelLoader.m in Sources */,
 				1C6F140F1438DCA10071E287 /* NIMEBaseLevel.m in Sources */,
 				1C6F14131438E2400071E287 /* NIMEBaseGraphicObject.m in Sources */,
+				1C4D29AD1440C153001C6C3D /* NIMEPhysicsManager.m in Sources */,
+				1C4D29B21440C187001C6C3D /* NIMEBasePhysicObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
