@@ -29,7 +29,7 @@ typedef NSString*   NIMEActorType;
 }
 
 
-@property (nonatomic, assign)NSUInteger     identifier;
+@property (nonatomic, readonly)NSUInteger   identifier;
 @property (nonatomic, copy)NSString*        name;
 @property (nonatomic,readonly)NIMEActorType type;
 @property (nonatomic, assign)NSUInteger     rendererIdentifier;
@@ -43,6 +43,7 @@ typedef NSString*   NIMEActorType;
 @property (nonatomic, assign)BOOL           flipY;
 @property (nonatomic, assign)NSInteger      zOrder;
 
+- (id)initWithIdentifier:(NSUInteger)identifier;
 - (void)onEnter;
 - (void)onExit;
 - (BOOL)hasRenderer;

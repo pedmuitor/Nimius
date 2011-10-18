@@ -24,14 +24,11 @@
 
 - (void)addActor:(NIMEBaseActor *)actor {
     
-    static NSUInteger identifier;
-    
     if (actor.identifier != 0) {
         //Trying to add an added actor
     }
     else {
         //Adding new actor
-        actor.identifier = ++identifier;
         [_loadedActors setObject:actor forKey:[NSNumber numberWithUnsignedInt:actor.identifier]];
     }
 }

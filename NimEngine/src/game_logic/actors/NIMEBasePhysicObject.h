@@ -6,12 +6,17 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "Box2D.h"
 
 @interface NIMEBasePhysicObject : NSObject {
     
     NSUInteger _identifier;
 }
 
-@property (nonatomic, assign) NSUInteger identifier;
+@property (nonatomic, readonly) NSUInteger identifier;
+
+- (id)initWithIdentifier:(NSUInteger)identifier;
+- (void)addFixture:(NSDictionary*)fixtureDefinition;
+- (void)addJoint:(NSDictionary*)jointDefinition;
 
 @end

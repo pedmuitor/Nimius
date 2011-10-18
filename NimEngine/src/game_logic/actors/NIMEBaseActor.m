@@ -37,10 +37,11 @@ extern NIMEEventManager*    gEventManager;
 #pragma mark
 #pragma Constructors & Destructors
 
-- (id)init{
+- (id)initWithIdentifier:(NSUInteger)identifier{
     self = [super init];
     if (self) {
-          [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_CREATED propertyOldValue:nil propertyNewValue:nil];
+        _identifier = identifier;
+        [self enqueueBasicEventWithType:NIME_EVENT_TYPE_ACTOR_CREATED propertyOldValue:nil propertyNewValue:nil];
         
     }
     

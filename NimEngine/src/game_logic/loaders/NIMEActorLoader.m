@@ -24,9 +24,12 @@
 }
 
 - (NIMEBaseActor*)loadActorFromData:(NSDictionary*)data {
+    
+    static NSUInteger identifier    = 0;
+    
     NIMEBaseActor* result           = nil;
     
-    result = [[NIMEBaseActor alloc] init];
+    result = [[NIMEBaseActor alloc] initWithIdentifier:++identifier];
 #warning TODO implementar loader
     
     return [result autorelease];

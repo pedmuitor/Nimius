@@ -10,10 +10,13 @@
 
 @implementation NIMEBaseGraphicObject
 
-- (id)init
+@synthesize identifier = _identifier;
+
+- (id)initWithIdentifier:(NSUInteger)identifier
 {
     self = [super init];
     if (self) {
+        _identifier = identifier;
         _animations = [[NSMutableDictionary alloc] init];
     }
     

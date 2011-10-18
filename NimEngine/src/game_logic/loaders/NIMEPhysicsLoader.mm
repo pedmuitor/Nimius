@@ -25,8 +25,7 @@
     
     static NSUInteger identifier = 0;
     
-    NIMEBasePhysicObject *result = [[NIMEBasePhysicObject alloc] init];
-    result.identifier = ++identifier;
+    NIMEBasePhysicObject *result = [[NIMEBasePhysicObject alloc] initWithIdentifier:++identifier];
     
     
     return [result autorelease];

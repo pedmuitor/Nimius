@@ -10,10 +10,14 @@
 
 @interface NIMEBaseGraphicObject : CCSprite {
     
+    NSUInteger          _identifier;
     NSMutableDictionary *_animations;
     
 }
 
+@property (nonatomic, readonly) NSUInteger identifier;
+
+- (id)initWithIdentifier:(NSUInteger)identifier;
 - (void)addAnimation:(NSString*)animationName frames:(NSArray*)animationFrames;
 
 @end
