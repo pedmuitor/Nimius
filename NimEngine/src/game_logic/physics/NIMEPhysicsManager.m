@@ -10,11 +10,11 @@
 
 @implementation NIMEPhysicsManager
 
-- (id)init
+- (id)initWithIdentifier:(NSUInteger)identifier;
 {
     self = [super init];
     if (self) {
-        // Initialization code here.
+
     }
     
     return self;
@@ -27,5 +27,6 @@
 - (void)step:(float)dt {
 
 }
+
 
 @end
