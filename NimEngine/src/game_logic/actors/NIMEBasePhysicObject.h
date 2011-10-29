@@ -11,6 +11,8 @@
 @interface NIMEBasePhysicObject : NSObject {
     
     NSUInteger _identifier;
+    
+    
 }
 
 @property (nonatomic, readonly) NSUInteger identifier;

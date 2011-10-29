@@ -7,13 +7,41 @@
 //
 
 @class NIMEBaseActor;
+@class NIMEBackgroundLayer;
 
 @interface NIMEBaseLevel : NSObject {
     
+    NSString            *_name;
     NSMutableDictionary *_loadedActors;
+    NSMutableArray      *_backgroundLayers;
+    
+    NSUInteger          _renderedIdentifier;
+    NSUInteger          _physicalIdentifier;
+}
+
+@property (nonatomic, readonly) NSString    *name;
+@property (nonatomic, assign)   NSUInteger  renderedIdentifier;
+@property (nonatomic, assign)   NSUInteger  physicalIdentifier;
+
+- (id)initWithName:(NSString*)aName;
+- (void)addBackgroundLayer:(NIMEBackgroundLayer*)backgroundLayer;
+- (void)addActor:(NIMEBaseActor*)actor;
+
+@end
+
+
+@interface NIMEBackgroundLayer : NSObject {
+    
+    NSArray     *_images;
+    NSArray     *_imagesPositions;
+    float       _layerParallax;
+    
+    NSUInteger  _renderedIdentifier;
     
 }
 
-- (void)addActor:(NIMEBaseActor*)actor;
+@property (nonatomic, assign) NSUInteger renderedIdentifier;
+
+- (id)initWithImages:(NSArray*)images positions:(NSArray*)positions layerParllax:(float)layerParallax;
 
 @end
