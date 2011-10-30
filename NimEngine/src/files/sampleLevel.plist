@@ -78,8 +78,8 @@
 				<string>400,400</string>
 				<string>800,400</string>
 			</array>
-			<key>layerParallax</key>
-			<string>0</string>
+			<key>parallaxRatio</key>
+			<string>0,0</string>
 		</dict>
 	</array>
 </dict>

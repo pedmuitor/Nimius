@@ -13,7 +13,6 @@
     
     NSString            *_name;
     NSMutableDictionary *_loadedActors;
-    NSMutableArray      *_backgroundLayers;
     
     NSUInteger          _renderedIdentifier;
     NSUInteger          _physicalIdentifier;
@@ -24,24 +23,6 @@
 @property (nonatomic, assign)   NSUInteger  physicalIdentifier;
 
 - (id)initWithName:(NSString*)aName;
-- (void)addBackgroundLayer:(NIMEBackgroundLayer*)backgroundLayer;
 - (void)addActor:(NIMEBaseActor*)actor;
-
-@end
-
-
-@interface NIMEBackgroundLayer : NSObject {
-    
-    NSArray     *_images;
-    NSArray     *_imagesPositions;
-    float       _layerParallax;
-    
-    NSUInteger  _renderedIdentifier;
-    
-}
-
-@property (nonatomic, assign) NSUInteger renderedIdentifier;
-
-- (id)initWithImages:(NSArray*)images positions:(NSArray*)positions layerParllax:(float)layerParallax;
 
 @end

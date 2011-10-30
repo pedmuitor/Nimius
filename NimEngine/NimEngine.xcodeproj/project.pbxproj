@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C3DF027145D60FB002B847B /* NIMEBaseScene.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C3DF025145D60FB002B847B /* NIMEBaseScene.h */; };
+		1C3DF028145D60FB002B847B /* NIMEBaseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3DF026145D60FB002B847B /* NIMEBaseScene.m */; };
 		1C4D29AC1440C153001C6C3D /* NIMEPhysicsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C4D29AA1440C153001C6C3D /* NIMEPhysicsManager.h */; };
 		1C4D29AD1440C153001C6C3D /* NIMEPhysicsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4D29AB1440C153001C6C3D /* NIMEPhysicsManager.m */; };
 		1C4D29B11440C187001C6C3D /* NIMEBasePhysicObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C4D29AF1440C187001C6C3D /* NIMEBasePhysicObject.h */; };
@@ -312,6 +314,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C3DF025145D60FB002B847B /* NIMEBaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEBaseScene.h; sourceTree = "<group>"; };
+		1C3DF026145D60FB002B847B /* NIMEBaseScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMEBaseScene.m; sourceTree = "<group>"; };
 		1C4D29AA1440C153001C6C3D /* NIMEPhysicsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEPhysicsManager.h; sourceTree = "<group>"; };
 		1C4D29AB1440C153001C6C3D /* NIMEPhysicsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMEPhysicsManager.m; sourceTree = "<group>"; };
 		1C4D29AF1440C187001C6C3D /* NIMEBasePhysicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMEBasePhysicObject.h; sourceTree = "<group>"; };
@@ -660,6 +664,8 @@
 			children = (
 				1C6F140C1438DCA10071E287 /* NIMEBaseLevel.h */,
 				1C6F140D1438DCA10071E287 /* NIMEBaseLevel.m */,
+				1C3DF025145D60FB002B847B /* NIMEBaseScene.h */,
+				1C3DF026145D60FB002B847B /* NIMEBaseScene.m */,
 			);
 			path = levels;
 			sourceTree = "<group>";
@@ -1371,6 +1377,7 @@
 				1CD338E0145C71FC0034326C /* b2PulleyJoint.h in Headers */,
 				1CD338E2145C71FC0034326C /* b2RevoluteJoint.h in Headers */,
 				1CD338E4145C71FC0034326C /* b2WeldJoint.h in Headers */,
+				1C3DF027145D60FB002B847B /* NIMEBaseScene.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1561,6 +1568,7 @@
 				1CD338DF145C71FC0034326C /* b2PulleyJoint.cpp in Sources */,
 				1CD338E1145C71FC0034326C /* b2RevoluteJoint.cpp in Sources */,
 				1CD338E3145C71FC0034326C /* b2WeldJoint.cpp in Sources */,
+				1C3DF028145D60FB002B847B /* NIMEBaseScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

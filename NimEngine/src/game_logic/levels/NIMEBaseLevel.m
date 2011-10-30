@@ -20,15 +20,14 @@
 {
     self = [super init];
     if (self) {
-        // Initialization code here.
-        _backgroundLayers = [[NSMutableArray alloc] init];
+        _name           = [aName copy];
+        _loadedActors   = [[NSMutableDictionary alloc] init];
+        
+        _renderedIdentifier = -1;
+        _physicalIdentifier = -1;
     }
     
     return self;
-}
-
-- (void)addBackgroundLayer:(NIMEBackgroundLayer *)backgroundLayer {
-    [_backgroundLayers addObject:backgroundLayer];
 }
 
 - (void)addActor:(NIMEBaseActor *)actor {
@@ -38,33 +37,6 @@
 - (void)dealloc {
     NIME_RELEASE_SAFETY(_name);
     NIME_RELEASE_SAFETY(_loadedActors);
-    NIME_RELEASE_SAFETY(_backgroundLayers);
-    [super dealloc];
-}
-
-@end
-
-
-@implementation NIMEBackgroundLayer
-
-@synthesize renderedIdentifier = _renderedIdentifier;
-
-- (id)initWithImages:(NSArray *)images positions:(NSArray *)positions layerParllax:(float)layerParallax {
-    if (self = [super init]) {
-        
-        NSAssert([images count] == [positions count], @"Number of images is different from positions");
-        
-        _images             = [images retain];
-        _imagesPositions    = [positions retain];
-        _layerParallax      = layerParallax;
-    }
-    
-    return self;
-}
-
-- (void)dealloc {
-    NIME_RELEASE_SAFETY(_images);
-    NIME_RELEASE_SAFETY(_imagesPositions);
     [super dealloc];
 }
 

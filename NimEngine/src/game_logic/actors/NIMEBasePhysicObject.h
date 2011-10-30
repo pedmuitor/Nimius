@@ -18,7 +18,7 @@
 @property (nonatomic, readonly) NSUInteger identifier;
 
 - (id)initWithIdentifier:(NSUInteger)identifier;
-- (void)addFixture:(NSDictionary*)fixtureDefinition;
-- (void)addJoint:(NSDictionary*)jointDefinition;
+//- (void)addFixture:(NSDictionary*)fixtureDefinition;
+//- (void)addJoint:(NSDictionary*)jointDefinition;
 
 @end
